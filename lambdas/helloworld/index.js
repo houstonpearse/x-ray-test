@@ -1,9 +1,9 @@
 exports.handler = async (event, context) => {
-    console.log(event)
-    console.log("helloworld");
+  console.log(event);
+  console.log("helloworld");
 
-    return {
-        "statusCode": 200,
-        "body": "test complete"
-    }
-}
+  return {
+    statusCode: 200,
+    body: "test complete",
+  };
+};
