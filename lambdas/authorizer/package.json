@@ -1,0 +1,7 @@
+{
+    "name": "authorizer",
+    "version": "0.1.0",
+    "dependencies": {
+        "aws-xray-sdk-core": "^3.5.0"
+    }
+  }
