@@ -5,7 +5,7 @@ const ddb = AWSXRay.captureAWSClient(new AWS.DynamoDB());
 exports.handler = async (event, context) => {
   console.log(event);
   try {
-    ddb.listTables();
+    console.log(ddb.listTables());
   } catch {
     console.log("DynamoDB Error");
   }
