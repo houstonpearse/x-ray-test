@@ -3,6 +3,7 @@ const AWSXRay = require("aws-xray-sdk-core");
 const AWS = require("aws-sdk"); // can use this to trace calls to dynamoDB
 const ddb = AWSXRay.captureAWSClient(new AWS.DynamoDB());
 exports.handler = async (event, context) => {
+  console.log(event);
   try {
     ddb.listTables();
   } catch {
@@ -20,7 +21,7 @@ exports.handler = async (event, context) => {
 
   // check return value from DynamoDB
   let isAuthorized = false;
-  if (event.headers.authorization.includes("authorizedtoken")) {
+  if (event.headers.Authorization.includes("authorizedtoken")) {
     isAuthorized = true;
   }
 
